@@ -26,7 +26,6 @@ shared class IndexView() extends View() satisfies Snippet<Div> {
 		}
 	};
 	
-	"Pulls any children together and passes to parent
-	 renderTemplate and returns to controller"
+	"Pass rendering back to base template"
 	shared Html renderTemplate() => parentView.renderTemplate;
 }

@@ -80,7 +80,9 @@ class BaseView() extends View() satisfies Snippet<Html>{
 		};
 	};
 	
-	
+	"BaseView returns content with child snippets returned inside
+	 the content attribute declaration. Function just typecasts
+	 down to Html type for [[NodeSerializer.serialize]]"
 	shared Html renderTemplate {
 		if (is Html result = content) { return result; }
 		else { return Html(); }
