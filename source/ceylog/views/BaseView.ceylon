@@ -28,14 +28,10 @@ class BaseView() extends View() satisfies Snippet<Html>{
 		{<String -> String>+} buttons) 
 			satisfies Snippet<Div>{
 		
-		content => Div {
-			classNames = "row";
-			Div {
-				classNames = "large-12 columns";
-				Div {
-					classNames = "nav-bar right";
-					Ul {
-						classNames = "button-group";
+		content => Div { classNames = "row";
+			Div { classNames = "large-12 columns";
+				Div { classNames = "nav-bar right";
+					Ul { classNames = "button-group";
 						for (name -> url in buttons) {
 							Li {
 								A {
@@ -47,11 +43,7 @@ class BaseView() extends View() satisfies Snippet<Html>{
 						}
 					}
 				},
-				H1 {
-					title;
-					Small(subtitle)
-					
-				},
+				H1 { title; Small(subtitle) },
 				Hr()
 			}
 		};
